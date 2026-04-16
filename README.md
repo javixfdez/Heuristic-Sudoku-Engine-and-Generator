@@ -6,22 +6,22 @@
 A Python-based Sudoku engine implementing Depth-First Search (Backtracking) and Greedy heuristic algorithms. Features a full pipeline for valid board generation, logic validation, and complexity analysis
 
 ## Project Overview
-[cite_start]This project, developed for **Programming II**, focuses on the implementation of advanced algorithms to solve and generate Sudoku puzzles[cite: 1, 3, 8]. [cite_start]The goal is to efficiently populate a $9\times9$ grid while adhering to the core constraints: every row, column, and $3\times3$ subgrid must contain digits 1-9 without repetition[cite: 8].
+This project, developed for **Programming II**, focuses on the implementation of advanced algorithms to solve and generate Sudoku puzzle.The goal is to efficiently populate a $9\times9$ grid while adhering to the core constraints: every row, column, and $3\times3$ subgrid must contain digits 1-9 without repetition.
 
 ## Algorithmic Approaches
 The engine compares two distinct methodologies to handle Sudoku as a constraint-satisfaction problem:
 
 ### 1. Backtracking (Depth-First Search)
-[cite_start]A methodical technique that fills cells by exploring valid possibilities recursively[cite: 16, 82]. 
-* [cite_start]**Reliability:** Guaranteed to find a solution if it exists[cite: 84].
-* [cite_start]**Complexity:** In the worst-case scenario, it explores $O(9^{81})$ configurations[cite: 150].
+A methodical technique that fills cells by exploring valid possibilities recursively. 
+* **Reliability:** Guaranteed to find a solution if it exists.
+* **Complexity:** In the worst-case scenario, it explores $O(9^{81})$ configurations.
 
 ### 2. Greedy Heuristic
-[cite_start]An optimized approach that selects the most "promising" number at each step based on local frequency[cite: 17, 121].
-* [cite_start]**Efficiency:** Uses `get_possible_numbers_greedy` to sort candidates by their occurrence in rows, columns, and subgrids[cite: 120].
-* [cite_start]**Optimization:** Significantly reduces the number of reversals/backtracks required in practical cases[cite: 157].
+An optimized approach that selects the most "promising" number at each step based on local frequency.
+* **Efficiency:** Uses `get_possible_numbers_greedy` to sort candidates by their occurrence in rows, columns, and subgrids.
+* **Optimization:** Significantly reduces the number of reversals/backtracks required in practical cases.
 
 ## Key Features
-- [cite_start]**Dynamic Board Generation:** Creates full, valid boards by first filling diagonal $3\times3$ subgrids and then completing the rest via backtracking[cite: 126, 131].
-- [cite_start]**Playable Puzzle Creation:** Generates puzzles of varying difficulty by selectively removing up to 50 numbers from a complete board[cite: 132, 138].
-- [cite_start]**Robust Validation:** Includes a comprehensive testing suite for original, empty, and invalid boards (e.g., handling repeated numbers in rows)[cite: 158, 160].
+- **Dynamic Board Generation:** Creates full, valid boards by first filling diagonal $3\times3$ subgrids and then completing the rest via backtracking.
+- **Playable Puzzle Creation:** Generates puzzles of varying difficulty by selectively removing up to 50 numbers from a complete board.
+- **Robust Validation:** Includes a comprehensive testing suite for original, empty, and invalid boards (e.g., handling repeated numbers in rows).
